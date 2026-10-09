@@ -1,0 +1,9 @@
+node_modules/
+dist/
+data/uploads/
+data/sessions.db
+data/*.db-wal
+data/*.db-shm
+cdhandbuch/
+.env
+*.log

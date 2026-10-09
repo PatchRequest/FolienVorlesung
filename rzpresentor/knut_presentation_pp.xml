@@ -1,0 +1,64 @@
+<idea>
+Lightweight presenting tool with functionality like Hedgedoc. Slides are created using markdown.
+</idea>
+<features>
+	Three different types of previews: editor, preview and side-by-side.
+	<editor>
+		Full text markdown editor which rich features like colors codes, text effects, headlines, url embeddings and such.
+		It should also contain complex implementations like font-color gradients (text has gradient as color) or basic animations for text motion.
+		<markdown>
+			Plan the implementation of what markdown derivative to use for the features asked. Since the features asked for this project are
+			pretty complex, even take into account if creating a new derivate for this project is worth it.
+		</markdown>
+		<animations>
+			Animations are motion styles applied to text elements and or other assets. For example a text bouncing in or appearing letter by letter is an animation.
+			These animations can be pretty basic and need (currently) no complex frame editor. The goal is simply to smooth the transitions by bringing in movement.
+			Think about how to implement a way to hide specific elements the user marked so they can appear one after another when the user is presenting.
+		</animation>
+		<pages>
+			Pages are controlled by a single markdown file the user edits.
+			The start of the markdown file controls the setting of the visual style of the pages.
+			Settings should contain keywords like "style" or "animation". Plan which settings are useful and what to implement.
+			These settings should also be present in the text-editor as selectables.
+			The content of the page needs to be between three equal signs ===
+			Every content between these equal signs is an own page.
+			<content>
+			Make sure the content entered is correctly visible. If a sentence gets too long, break line. If the content is a bullet point, the linebreak should put the next line
+			at the height of the text after the original bullet point. Images and external videos (external like youtube) need to be fitted correctly to size.
+			Add support for LaTeX. Also think about integrating LaTeX into the editor.
+			</content>
+		</pages>
+	</editor>
+	<presenting>
+		The presenter should be able to start the presentation from the beginning or at the current page.
+		The presenter should see a special screen with a big view of the current page and a small view of the next page right next to it. Below the next page preview I want a timer
+		that shows the time passed since the presentation started. Add basic controls like pause time, reset time, continue time.
+		<tools>
+			Also add a textmarker, a laserpointer and an eraser so the user can highlight specific elements on the page while presenting.
+		</tools>
+	</presenting>
+</features>
+<technologies>
+	Think about the technologies used for implementing the features described to the best you can. This includes frontend design as well as backend design.
+	Plan a thoughtful system architecture that is simple to deploy via a docker container (docker compose).
+	The user experience is top priority.
+	Use external libraries if needed but read the documentation first and understand which function calls really exist.
+</technologies>
+<user_management>
+	Users should only create presentations when logged in. All data should be stored inside a sqlite. The data folder MUST be outside the webserver scope. (data not in public folder)
+	Users can register and login. Think about the authentication process and security.
+	<security>
+		Think about common exploits and implement a strategy on how to circumvent these. User passwords must be stored hashed, no plain text passwords.
+		The primary user ID should be stored as UUID for safety.
+		The first user to register has special admin privileges. The admin should have a special admin page where they can do administrative work like
+		resetting user passwords (only the admin can reset passwords), locking accounts (locked accounts cannot log in) and disabling the register feature so only existing users can log in.
+		Secure fields agains attack vectors like sql or xss injections.
+	</security>
+</user_management>
+<design>
+	 I uploaded our corporate design manual as well as all the assets like logos and banner (folder "cdhandbuch") into the project folder.
+	Read the manual, understand it and use it while implementing the design.
+</design>
+<docker>
+	The port to access this application should be configured inside a .env file, as well as all other important settings.
+</docker>

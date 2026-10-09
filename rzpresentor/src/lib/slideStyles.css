@@ -1,0 +1,279 @@
+/* Base slide styles */
+.slide {
+  width: 100%;
+  height: 100%;
+  padding: 3rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: var(--font-family);
+  overflow: hidden;
+  position: relative;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.slide h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; }
+.slide h2 { font-size: 2rem; font-weight: 800; margin-bottom: 0.75rem; }
+.slide h3 { font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem; }
+.slide p { font-size: 1.25rem; margin-bottom: 0.75rem; line-height: 1.6; }
+.slide ul, .slide ol { font-size: 1.25rem; margin-left: 2rem; margin-bottom: 0.75rem; }
+.slide ul { list-style: none; }
+.slide ul > li::before { content: '\00BB\00A0'; color: var(--color-primary, #bd93f9); } /* accent guillemet bullets */
+.slide li { margin-bottom: 0.4rem; line-height: 1.5; }
+.slide li > ul, .slide li > ol { margin-top: 0.25rem; }
+
+.slide img {
+  max-width: 100%;
+  max-height: 80%;
+  object-fit: contain;
+  border-radius: var(--radius);
+}
+
+
+.slide .embed-container {
+  position: relative;
+  width: 65%;
+  max-width: 600px;
+  aspect-ratio: 16 / 9;
+  flex-shrink: 0;
+}
+.slide .embed-container iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  border-radius: var(--radius);
+  border: none;
+}
+
+.slide code {
+  background: var(--color-bg-secondary);
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+.slide pre {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 1rem;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  /* Slides are static: there is no horizontal scrollbar to reach, so long
+     commands must wrap instead of being clipped. Vertical growth is handled
+     by the auto-fit scaler (useAutoFit). */
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.slide pre code {
+  /* Inline-code styling must not leak into code blocks. */
+  background: none;
+  padding: 0;
+  font-size: inherit;
+}
+
+.slide .katex-block {
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 1.3rem;
+}
+
+/* Slide footer */
+.slide-footer {
+  position: absolute;
+  bottom: 1rem;
+  left: 4rem;
+  right: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+}
+
+/* Style: modern (default - follows HS Fulda CD: black text on white) */
+.slide-style-modern {
+  background: white;
+  color: #000000;
+}
+.slide-style-modern h1,
+.slide-style-modern h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+/* Green accent line under headings per CD */
+.slide-style-modern h1::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #72BF44;
+  margin-top: 0.5rem;
+}
+
+/* Style: minimal */
+.slide-style-minimal {
+  background: white;
+  color: var(--color-text);
+}
+
+/* Style: dark */
+.slide-style-dark {
+  background: #1a1a1a;
+  color: #f0f0f0;
+}
+.slide-style-dark h1,
+.slide-style-dark h2 {
+  color: var(--color-primary);
+}
+.slide-style-dark code { background: #333; }
+
+/* Style: dracula */
+.slide-style-dracula {
+  background: #282a36;
+  color: #f8f8f2;
+}
+.slide-style-dracula h1,
+.slide-style-dracula h2,
+.slide-style-dracula h3 {
+  color: #bd93f9;
+}
+.slide-style-dracula a {
+  color: #8be9fd;
+}
+.slide-style-dracula code {
+  background: #44475a;
+}
+.slide-style-dracula pre {
+  background: #1e1e2e;
+}
+.slide-style-dracula blockquote {
+  border-left: 4px solid #ff79c6;
+  color: #6272a4;
+  padding-left: 1rem;
+}
+.slide-style-dracula ul > li::before {
+  color: #50fa7b;
+}
+.slide-style-dracula strong {
+  color: #ffb86c;
+}
+.slide-style-dracula em {
+  color: #ff79c6;
+}
+.slide-style-dracula .slide-footer {
+  color: #6272a4;
+  border-top-color: #44475a;
+}
+
+/* Two-column layout */
+.slide-columns {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  align-items: center;
+}
+.slide-col {
+  flex: 1;
+  min-width: 0;
+  max-height: 100%;
+  overflow: hidden;
+}
+.slide-col img {
+  max-width: 100%;
+  max-height: 350px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Mermaid diagram images (pre-rendered SVGs).
+   The cap is an absolute length in the fixed 540px slide design space (the
+   outer scale() transform handles display sizing). A percentage max-height
+   does NOT work here: markdown-it wraps a lone image in a <p> whose height is
+   auto, so a % resolves against an indefinite height and is ignored — which
+   let tall diagrams render unclamped and clip under the footer. */
+.slide img[src*="mermaid_"] {
+  max-width: 100%;
+  max-height: 380px;
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  object-fit: contain;
+}
+
+/* Public index page — Dracula-themed */
+.public-index {
+  min-height: 100vh;
+  background: #282a36;
+  color: #f8f8f2;
+  font-family: 'Nunito Sans', sans-serif;
+  padding: 2rem 1rem 4rem;
+}
+
+.public-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #44475a;
+}
+
+.public-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #bd93f9;
+  margin-bottom: 0.5rem;
+}
+
+.public-header p {
+  font-size: 1.1rem;
+  color: #6272a4;
+  margin: 0;
+}
+
+.public-loading,
+.public-empty {
+  text-align: center;
+  color: #6272a4;
+  font-size: 1.1rem;
+  margin-top: 4rem;
+}
+
+.public-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.25rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.public-card {
+  display: block;
+  background: #44475a;
+  border: 1px solid #6272a4;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: #f8f8f2;
+  transition: border-color 0.2s, background 0.2s, transform 0.15s;
+}
+
+.public-card:hover {
+  border-color: #bd93f9;
+  background: #50526a;
+  transform: translateY(-2px);
+  color: #f8f8f2;
+}
+
+.public-card h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #8be9fd;
+  margin: 0 0 0.75rem;
+  line-height: 1.4;
+}
+
+.public-card-date {
+  font-size: 0.8rem;
+  color: #6272a4;
+}

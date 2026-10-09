@@ -1,0 +1,52 @@
+{
+  "name": "rzpresenter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "start": "node server/index.js",
+    "dev:server": "node --watch server/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@codemirror/autocomplete": "^6.20.1",
+    "@codemirror/commands": "^6.10.3",
+    "@codemirror/lang-markdown": "^6.5.0",
+    "@codemirror/language": "^6.12.2",
+    "@codemirror/lint": "^6.9.5",
+    "@codemirror/search": "^6.6.0",
+    "@codemirror/state": "^6.6.0",
+    "@codemirror/view": "^6.40.0",
+    "@mermaid-js/mermaid-cli": "^11.12.0",
+    "bcryptjs": "^3.0.3",
+    "better-sqlite3": "^12.8.0",
+    "codemirror": "^6.0.2",
+    "connect-sqlite3": "^0.9.16",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.3.1",
+    "express-session": "^1.19.0",
+    "helmet": "^8.1.0",
+    "katex": "^0.16.42",
+    "lucide-react": "^1.6.0",
+    "markdown-it": "^14.1.1",
+    "mermaid": "^11.13.0",
+    "multer": "^2.1.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-router-dom": "^7.13.2",
+    "uuid": "^13.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.1",
+    "vite": "^8.0.2"
+  }
+}

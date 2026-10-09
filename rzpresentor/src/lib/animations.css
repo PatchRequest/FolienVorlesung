@@ -1,0 +1,55 @@
+/* Animation base */
+.anim { display: inline-block; }
+
+/* fadeIn */
+.anim-fadeIn { animation: fadeIn 0.6s ease both; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* fadeInUp */
+.anim-fadeInUp { animation: fadeInUp 0.6s ease both; }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+/* fadeInDown */
+.anim-fadeInDown { animation: fadeInDown 0.6s ease both; }
+@keyframes fadeInDown { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
+
+/* fadeInLeft */
+.anim-fadeInLeft { animation: fadeInLeft 0.6s ease both; }
+@keyframes fadeInLeft { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: translateX(0); } }
+
+/* fadeInRight */
+.anim-fadeInRight { animation: fadeInRight 0.6s ease both; }
+@keyframes fadeInRight { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
+
+/* bounceIn */
+.anim-bounceIn { animation: bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) both; }
+@keyframes bounceIn { from { opacity: 0; transform: scale(0.3); } to { opacity: 1; transform: scale(1); } }
+
+/* zoomIn */
+.anim-zoomIn { animation: zoomIn 0.5s ease both; }
+@keyframes zoomIn { from { opacity: 0; transform: scale(0); } to { opacity: 1; transform: scale(1); } }
+
+/* typewriter */
+.anim-typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid var(--color-text);
+  animation: typewriter 2s steps(40) both, blink 0.75s step-end infinite;
+  width: 0;
+}
+@keyframes typewriter { to { width: 100%; } }
+@keyframes blink { 50% { border-color: transparent; } }
+
+/* Fragment visibility */
+.fragment { opacity: 0; transition: opacity 0.4s ease, transform 0.4s ease; }
+.fragment.visible { opacity: 1; }
+
+/* Slide transitions */
+.slide-transition-fade-enter { opacity: 0; }
+.slide-transition-fade-enter-active { opacity: 1; transition: opacity 0.4s ease; }
+
+.slide-transition-slide-enter { transform: translateX(100%); }
+.slide-transition-slide-enter-active { transform: translateX(0); transition: transform 0.4s ease; }
+
+.slide-transition-zoom-enter { transform: scale(0.8); opacity: 0; }
+.slide-transition-zoom-enter-active { transform: scale(1); opacity: 1; transition: all 0.4s ease; }

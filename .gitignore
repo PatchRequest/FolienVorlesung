@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.env
+*.log
+.DS_Store
+
+# Runtime DB files (the .db itself is tracked)
+rzpresentor/data/uploads/
+rzpresentor/data/sessions.db
+rzpresentor/data/*.db-wal
+rzpresentor/data/*.db-shm
+
+# IDE / tooling
+.claude/
+.playwright-mcp/
+cdhandbuch/

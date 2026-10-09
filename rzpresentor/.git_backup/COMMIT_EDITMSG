@@ -1,0 +1,11 @@
+Initial release: RZPresenter with offensive security lecture slides
+
+Markdown-based presentation tool with editor, presenter mode, and
+public viewing. Ships with pre-populated SQLite database containing
+10 lecture decks covering OSINT, physical pentesting, web hacking,
+Active Directory, pivoting, C2 fundamentals, advanced C2, and
+game hacking.
+
+Default credentials: admin / admin
+
+Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>

@@ -1,0 +1,16 @@
+services:
+  rzpresenter:
+    build: .
+    ports:
+      - "${PORT:-3000}:3000"
+    env_file:
+      - .env
+    environment:
+      IMAGES_DIR: /app/images
+    volumes:
+      - rzpresenter-data:/app/data
+      - ../images:/app/images:ro
+    restart: unless-stopped
+
+volumes:
+  rzpresenter-data:

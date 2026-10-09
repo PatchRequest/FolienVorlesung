@@ -1,0 +1,27 @@
+0000000000000000000000000000000000000000 2f912a50ac2d94371c432b2d884530c6aa00f699 PatchRequest <me@danielriebel.com> 1774432637 +0100	clone: from https://github.com/etlon/rzpresentor
+2f912a50ac2d94371c432b2d884530c6aa00f699 620500471c43b0e8f046850a49687dd19a97d8b9 PatchRequest <me@danielriebel.com> 1774433932 +0100	commit: feat: add Dracula theme and set it as the default slide style
+620500471c43b0e8f046850a49687dd19a97d8b9 ee1515b3d1ceb4777ffa28673a62d0924f57fbf2 PatchRequest <me@danielriebel.com> 1774433936 +0100	commit: Task 3: Add slug and public columns to presentations table
+ee1515b3d1ceb4777ffa28673a62d0924f57fbf2 ad7b1fa4b7a9220937d987afe82216a53c9abe8c PatchRequest <me@danielriebel.com> 1774433995 +0100	commit: Rebrand to Daniel Riebel / DHBW Mannheim with Dracula color scheme
+ad7b1fa4b7a9220937d987afe82216a53c9abe8c 049cdcafc9ff4c797fd60ee0a704cbcbca85044a PatchRequest <me@danielriebel.com> 1774434134 +0100	commit: Add public API routes and static /images/ serving
+049cdcafc9ff4c797fd60ee0a704cbcbca85044a a5e71f01dedeb240ae9e67ea09910d88062361a5 PatchRequest <me@danielriebel.com> 1774434150 +0100	commit: Add pluginImageWidth markdown-it plugin
+a5e71f01dedeb240ae9e67ea09910d88062361a5 45cdbe1d151df1267729fd86d41c610183e2f600 PatchRequest <me@danielriebel.com> 1774434161 +0100	commit: feat: extend Presentations API with slug and public fields
+45cdbe1d151df1267729fd86d41c610183e2f600 45941ad87f378d9a8464bc7d83e0ec82fa740063 PatchRequest <me@danielriebel.com> 1774434281 +0100	commit: feat: add public index page at /public
+45941ad87f378d9a8464bc7d83e0ec82fa740063 949466817b97dda6cfde9f08c58174b25981710e PatchRequest <me@danielriebel.com> 1774434344 +0100	commit: feat: add public view page for unauthenticated slide presentation
+949466817b97dda6cfde9f08c58174b25981710e 950715e2a3c60a9657da1c77b3d38f3b6c72a81b PatchRequest <me@danielriebel.com> 1774434456 +0100	commit: feat: Show public badge and permalink slug on dashboard cards
+950715e2a3c60a9657da1c77b3d38f3b6c72a81b 2a4753bd54bd27b8aed48339ee3661593825adbd PatchRequest <me@danielriebel.com> 1774434506 +0100	commit: feat: add slug and public toggle to editor settings panel
+2a4753bd54bd27b8aed48339ee3661593825adbd 47ca59db471b7e1eca80ce23c60fe38106a29dec PatchRequest <me@danielriebel.com> 1774434525 +0100	commit: Add convert-and-import script for presenterm → rzpresentor migration
+47ca59db471b7e1eca80ce23c60fe38106a29dec d72330e6829ff9dfbb80d4bf8e4ba81cd77d2f03 PatchRequest <me@danielriebel.com> 1774434631 +0100	commit: Task 12: Docker Setup
+d72330e6829ff9dfbb80d4bf8e4ba81cd77d2f03 0caba13c8a74f2b712239b00b268dc348fadbbea PatchRequest <me@danielriebel.com> 1774434866 +0100	commit: fix: use CREATE UNIQUE INDEX for slug column (SQLite ALTER TABLE limitation)
+0caba13c8a74f2b712239b00b268dc348fadbbea b1199d4707591360b5ec5fe793ef6aa28b7dcb8b PatchRequest <me@danielriebel.com> 1774435529 +0100	commit: feat: add mermaid diagram rendering support
+b1199d4707591360b5ec5fe793ef6aa28b7dcb8b 852fb94bfe39dcf5b82f70a7265cd1f9023f47d5 PatchRequest <me@danielriebel.com> 1774435984 +0100	commit: fix: mermaid rendering — proper HTML escaping and auto-fit re-measure
+852fb94bfe39dcf5b82f70a7265cd1f9023f47d5 ad5cb0b1b2541ab7865df80f83bd175ccf2c354a PatchRequest <me@danielriebel.com> 1774438226 +0100	commit: feat: pre-render mermaid diagrams to SVG during import
+ad5cb0b1b2541ab7865df80f83bd175ccf2c354a 51b9e572a89c0f10642f10d50004a1f3bb074930 PatchRequest <me@danielriebel.com> 1774439186 +0100	commit: feat: column layouts, auto-fit image loading, mermaid pre-render fixes
+51b9e572a89c0f10642f10d50004a1f3bb074930 2e913fb65d9d2cce0e699db29b103e1c8a0930f0 PatchRequest <me@danielriebel.com> 1774439364 +0100	commit: fix: increase slide image max-height to 80% for better space usage
+2e913fb65d9d2cce0e699db29b103e1c8a0930f0 4520e1dde99d62561724a6404bfafe85b0e3a7e4 PatchRequest <me@danielriebel.com> 1774440931 +0100	commit: fix: reliable auto-fit for overflowing slides
+4520e1dde99d62561724a6404bfafe85b0e3a7e4 4252dfa1609390a3dda431a5ca20289e6fbb8779 PatchRequest <me@danielriebel.com> 1774442854 +0100	commit: feat: bake slide layout fixes into conversion script
+4252dfa1609390a3dda431a5ca20289e6fbb8779 9af1bb3875b62c21d89b3e815c96460bd3fbf581 PatchRequest <me@danielriebel.com> 1774447560 +0100	commit: fix: columns plugin handles ||| inside paragraphs, fix broken separators
+9af1bb3875b62c21d89b3e815c96460bd3fbf581 e7afd9766ccdfef4c44542230b1b29802a795c8b PatchRequest <me@danielriebel.com> 1791559479 +0200	commit: Fix image serving, auto-fit scaling, code wrapping, and mermaid rendering
+e7afd9766ccdfef4c44542230b1b29802a795c8b e7afd9766ccdfef4c44542230b1b29802a795c8b PatchRequest <me@danielriebel.com> 1791559862 +0200	reset: moving to HEAD
+0000000000000000000000000000000000000000 da52d6fcae72b070724239f853b1d4a26bd571a1 PatchRequest <me@danielriebel.com> 1791559997 +0200	commit (initial): Initial release: RZPresenter with offensive security lecture slides
+da52d6fcae72b070724239f853b1d4a26bd571a1 0000000000000000000000000000000000000000 PatchRequest <me@danielriebel.com> 1791560050 +0200	Branch: renamed refs/heads/squashed to refs/heads/master
+0000000000000000000000000000000000000000 da52d6fcae72b070724239f853b1d4a26bd571a1 PatchRequest <me@danielriebel.com> 1791560050 +0200	Branch: renamed refs/heads/squashed to refs/heads/master
